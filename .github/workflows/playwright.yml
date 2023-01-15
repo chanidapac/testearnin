@@ -1,5 +1,10 @@
 name: Upload to S3
-on: [workflow_dispatch]
+# on: [workflow_dispatch]
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
 jobs:
   test:
     timeout-minutes: 60
